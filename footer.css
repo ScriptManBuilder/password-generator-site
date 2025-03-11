@@ -1,0 +1,29 @@
+/* Общие стили для футера */
+footer {
+    background: linear-gradient(135deg, #1f1b2e, #0e0b16);  /* Градиент для футера */
+    color: #fff;  /* Белый текст для контраста */
+    padding: 20px 40px;  /* Отступы для большего пространства */
+    text-align: center;  /* Выравнивание текста по центру */
+    margin-top: 30px;  
+    left: 0;
+    bottom: 0;
+    width: 100%;  /* Растягиваем футер на всю ширину */
+    box-sizing: border-box;  /* Учитываем отступы в общей ширине */
+    z-index: 10;  /* Обеспечиваем, чтобы футер был на переднем плане */
+}
+
+/* Закрепляем футер внизу */
+footer {
+    background: linear-gradient(135deg, #1f1b2e, #0e0b16);
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Эффект наведения на текст футера */
+footer p:hover {
+    color: #f1c40f;  /* Ярко-желтый цвет текста при наведении */
+    cursor: pointer;  /* Курсор в виде руки */
+}
