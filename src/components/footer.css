@@ -1,0 +1,91 @@
+/* Общие стили для футера */
+footer {
+    background: linear-gradient(135deg, #0d0a1a, #1b1525); /* Более глубокий и темный градиент */
+    color: #ddd; /* Светло-серый текст для контраста */
+    padding: 40px 20px;  /* Увеличение отступов для лучшего восприятия */
+    text-align: center;
+    margin-top: 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    border-top: 2px solid rgba(255, 255, 255, 0.1); /* Легкая линия вверху для акцента */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.8); /* Тень сверху для объема */
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт */
+    animation: fadeIn 0.6s ease-out; /* Анимация */
+}
+
+/* Эффект наведения на текст футера */
+footer p {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer p:hover {
+    color: #00ffcc; /* Неоново-зеленый цвет при наведении */
+    text-shadow: 0 0 12px #00ffcc; /* Эффект свечения */
+    cursor: pointer;
+}
+
+/* Анимация при появлении футера */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.divider {
+    border: 0;
+    border-top: 2px solid #00ffcc; /* Green color line */
+    margin: 10px auto; /* Center the line */
+    width: 50%; /* Adjust the width of the line */
+  }
+/* Социальные иконки */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #ddd;
+    font-size: 28px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект наведения на иконки */
+.social-icons a:hover {
+    color: #00ffcc;
+    transform: translateY(-5px); /* Легкое поднятие иконки при наведении */
+}
+
+/* Информация в футере */
+.footer-info {
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-info a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Дополнительная информация */
+.footer-additional-info {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 10px;
+}

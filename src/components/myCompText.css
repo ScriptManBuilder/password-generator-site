@@ -1,0 +1,133 @@
+/* Общий контейнер */
+.text-container {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #2c3e50, #1e1e1e); /* Темный градиент */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Легкая тень для всего контейнера */
+  border-radius: 15px; /* Закругленные углы */
+  color: #e0e0e0; /* Основной цвет текста */
+  background-color: #B6D0E3; /* Для fallback */
+}
+
+/* Заголовок */
+.section-title {
+  font-size: 48px;
+  color: #00ffff; /* Яркий голубой для контраста */
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px; /* Немного расширенные буквы */
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Легкая сияющая тень */
+  animation: glow 1.5s infinite alternate; /* Анимация свечения */
+}
+
+/* Анимация заголовка */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+}
+
+/* Контейнер для карточек */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+/* Стили для карточек */
+.card {
+  width: 30%;
+  height: 320px;
+  background: #2c3e50; /* Темный фон для карточек */
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background-color: #1e1e1e; /* Для fallback */
+}
+
+/* Эффект при наведении на карточку */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  background-color: #34495e; /* Легкий оттенок синего при наведении */
+}
+
+/* Заголовок карточки */
+.card-title {
+  font-size: 24px;
+  color: #e0e0e0; /* Светлый цвет для контраста */
+  margin: 15px 0;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Эффект при наведении на заголовок карточки */
+.card:hover .card-title {
+  color: #00ffff; /* Яркий голубой цвет на hover */
+}
+
+/* Описание карточки */
+.card-description {
+  font-size: 18px;
+  color: #ddd;/* Светло-серый для описания */
+  line-height: 1.8;
+  transition: color 0.3s ease;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Иконки карточек */
+.card-icon {
+  font-size: 48px;
+  color: #00ffff; /* Яркий голубой для иконок */
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Эффект при наведении на иконки карточек */
+.card:hover .card-icon {
+  color: #00bcd4; /* Более темный голубой на hover */
+}
+
+/* Информационный текст */
+.info-text {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Медиа-запрос для адаптивности */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .card-container {
+    justify-content: center; /* Центрирование карточек на мобильных устройствах */
+  }
+
+  .info-text {
+    font-size: 16px;
+  }
+}

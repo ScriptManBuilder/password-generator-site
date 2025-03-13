@@ -1,0 +1,154 @@
+/* Общие стили для body и html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    display: block;
+    background-color: #0a0a0f; /* Темный фон для контраста */
+}
+
+/* Хедер */
+header {
+    background: linear-gradient(135deg, #0d0a1a, #1b1525); /* Глубокий темный градиент */
+    color: #ddd;
+    padding: 5px 40px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Тень для объема */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Линия внизу для четкости */
+}
+
+/* Заголовок в хедере */
+header h1 {
+    font-size: 33px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffcc; /* Неоновый акцент */
+    text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc; /* Неоновое свечение */
+    margin: 0;
+    padding: 1px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header h1:hover {
+    color: #f1c40f; /* Яркий желтый при наведении */
+    text-shadow: 0 0 20px #f1c40f, 0 0 40px #f1c40f;
+}
+
+/* Навигация */
+header nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Ссылки навигации */
+header nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #00ffcc;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc;
+}
+
+header nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Эффект появления при загрузке */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Контент хедера */
+.header-content {
+    display: flex; 
+    align-items: center; /* Выравниваем по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    gap: 20px; /* Отступ между заголовком и изображением */
+}
+
+/* Картинка в хедере */
+.background-image {
+    width: 80px; /* Ограничиваем размер изображения */
+    height: 80px;
+    object-fit: cover; /* Обрезаем изображение, сохраняя его пропорции */
+    object-position: center; /* Центрируем изображение */
+}
+
+/* Параграф с текстом */
+header p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Адаптивность для экранов меньше 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column; /* Элементы будут располагаться вертикально */
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav a {
+        font-size: 16px;
+    }
+
+    .background-image {
+        width: 60px; /* Уменьшаем размер изображения на мобильных */
+        height: 60px;
+    }
+}

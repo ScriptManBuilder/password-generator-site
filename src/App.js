@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css';  // Main styles for the app
+import PasswordGenerate from './components/passwordGenerate';  // Importing the password generator component
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/header';  // Importing Header component
+import Footer from './components/footer';  // Importing Footer component
+import MyCompText from './components/myCompText';  // Corrected the import name to match the component name
+import FaqInfo from './components/faqInfo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header /> 
+      
+      {/* Password Information */}
+      <main>
+       
+        <PasswordGenerate />  {/* Using the password generator component */}
+        <MyCompText />  {/* Corrected usage of the component */}
+        <FaqInfo />
+      </main>
+
+      <Footer />  
     </div>
   );
 }
