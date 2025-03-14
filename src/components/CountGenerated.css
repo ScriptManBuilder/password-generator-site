@@ -1,0 +1,98 @@
+/* Виджет для отображения количества сгенерированных паролей */
+.count-generated-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2c3e50, #1e1e1e);
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+    color: white;
+    min-height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Заголовок для CountGenerated */
+.count-generated-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00ffff;
+    text-transform: uppercase;
+}
+
+/* Кнопка с отображаемым количеством */
+.count-generated-number {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.count-generated-number:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+}
+
+/* Текст, который отображается после нажатия */
+.count-generated-message {
+    font-size: 1rem;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1024px) {
+    .count-generated-container {
+        width: 90%;
+    }
+
+    .count-generated-title {
+        font-size: 1.4rem;
+    }
+
+    .count-generated-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .count-generated-container {
+        width: 90%;
+    }
+
+    .count-generated-title {
+        font-size: 1.4rem;
+    }
+
+    .count-generated-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .count-generated-container {
+        width: 100%;
+    }
+
+    .count-generated-title {
+        font-size: 1.2rem;
+    }
+
+    .count-generated-number {
+        font-size: 1.6rem;
+    }
+}
