@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './passwordGenerate.css';
-
+import CountGenerated from './CountGenerated';
 
 function App() {
   const [password, setPassword] = useState('');
@@ -145,7 +145,7 @@ function App() {
         </button>
       
       </div>
-       
+      <CountGenerated />
               
     </div>
   );

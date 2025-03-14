@@ -1,6 +1,7 @@
 /* Общий контейнер */
 .text-container {
   padding: 60px 20px;
+  margin-top: 25px;
   background: linear-gradient(135deg, #2c3e50, #1e1e1e); /* Темный градиент */
   text-align: center;
   font-family: 'Roboto', sans-serif;
